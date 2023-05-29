@@ -1,46 +1,38 @@
-// Import the function to be tested
-const fizzBuzz = require('./fizzBuzz'); // Assuming fizzBuzz.js is the file containing the implementation
+// IMPORTS
+const FizzBuzz = require('./FizzBuzz');
 
-// Test suite
 describe('FizzBuzz', () => {
-    // Test case 1: 3 should return "Fizz"
-    test('should return "Fizz" when the input is divisible by 3', () => {
-        expect(fizzBuzz(3)).toBe('Fizz');
-        expect(fizzBuzz(9)).toBe('Fizz');
-        expect(fizzBuzz(12)).toBe('Fizz');
+  describe('generate()', () => {
+    it('should generate the correct FizzBuzz sequence', () => {
+      const expectedOutput = ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz"];
+      const actualOutput = FizzBuzz.generate(10);
+      expect(actualOutput).toEqual(expectedOutput);
+    });
+  });
+
+  describe('getReplacement()', () => {
+    it('should return "Fizz" for multiples of 3', () => {
+      expect(FizzBuzz.getReplacement(3)).toBe("Fizz");
+      expect(FizzBuzz.getReplacement(6)).toBe("Fizz");
+      expect(FizzBuzz.getReplacement(9)).toBe("Fizz");
     });
 
-    // Test case 2: 5 should return "Buzz"
-    test('should return "Buzz" when the input is divisible by 5', () => {
-        expect(fizzBuzz(5)).toBe('Buzz');
-        expect(fizzBuzz(10)).toBe('Buzz');
-        expect(fizzBuzz(20)).toBe('Buzz');
+    it('should return "Buzz" for multiples of 5', () => {
+      expect(FizzBuzz.getReplacement(5)).toBe("Buzz");
+      expect(FizzBuzz.getReplacement(10)).toBe("Buzz");
+      expect(FizzBuzz.getReplacement(20)).toBe("Buzz");
     });
 
-    // Test case 3: 15 should return "FizzBuzz"
-    test('should return "FizzBuzz" when the input is divisible by both 3 and 5', () => {
-        expect(fizzBuzz(15)).toBe('FizzBuzz');
-        expect(fizzBuzz(30)).toBe('FizzBuzz');
-        expect(fizzBuzz(45)).toBe('FizzBuzz');
+    it('should return "FizzBuzz" for multiples of both 3 and 5', () => {
+      expect(FizzBuzz.getReplacement(15)).toBe("FizzBuzz");
+      expect(FizzBuzz.getReplacement(30)).toBe("FizzBuzz");
+      expect(FizzBuzz.getReplacement(45)).toBe("FizzBuzz");
     });
 
-    // Test case 4: Other numbers should return the input itself
-    test('should return the input number as a string for other cases', () => {
-        expect(fizzBuzz(1)).toBe('1');
-        expect(fizzBuzz(7)).toBe('7');
-        expect(fizzBuzz(19)).toBe('19');
+    it('should return the number itself for non-multiples of 3 or 5', () => {
+      expect(FizzBuzz.getReplacement(1)).toBe(1);
+      expect(FizzBuzz.getReplacement(7)).toBe(7);
+      expect(FizzBuzz.getReplacement(13)).toBe(13);
     });
+  });
 });
-
-
-///////////////////////
-///// DESCRIPTION /////
-///////////////////////
-
-// The first test case checks if the function returns "Fizz" when the input is divisible by 3.
-
-// The second test case checks if the function returns "Buzz" when the input is divisible by 5.
-
-// The third test case checks if the function returns "FizzBuzz" when the input is divisible by both 3 and 5.
-
-// The fourth test case checks if the function returns the input number itself as a string for other cases.

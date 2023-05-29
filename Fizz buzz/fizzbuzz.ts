@@ -1,20 +1,18 @@
 class FizzBuzz {
-    generate(number: number) {
-        let output: string[];
-        for (let i = 1; i <= n; i++) {
+    static generate(number: number) {
+        let output: string[] = [];
+        for (let i = 1; i <= number; i++) {
             output.push(this.getReplacement(i));
         }
         return output;
     }
 
-    getReplacement(number: number): string {
+    static getReplacement(number: number): any {
         if (number % 3 === 0 && number % 5 === 0) return "FizzBuzz";
         if (number % 3) return "Fizz";
         if (number % 5) return "Buzz";
-        else return n;
+        else return number;
     }
 }
 
-const fizzBuzz = new FizzBuzz();
-const result = fizzBuzz.generate(100);
-console.log(result.join(", "));
+console.log(FizzBuzz.generate(10).join(", "));
