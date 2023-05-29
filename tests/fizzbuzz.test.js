@@ -1,4 +1,6 @@
-// IMPORTS
+/////////////////////////////
+///////// IMPORTS //////////
+///////////////////////////
 const FizzBuzz = require('./FizzBuzz');
 
 describe('FizzBuzz', () => {
