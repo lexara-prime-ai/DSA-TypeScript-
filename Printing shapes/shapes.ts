@@ -32,14 +32,3 @@ DRAW.steps(3);
 
 
 
-function steps(n, row = 0, stair = '') {
-    if (n === row) {
-        return
-    }
-    if (n === stair.length) {
-        console.log(stair);
-        return steps(n, row + 1)
-    }
-    stair.length <= row ? stair += '#' : stair += ' '
-    steps(n, row, stair)
-}
