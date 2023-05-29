@@ -1,7 +1,7 @@
-/////////////////////////////
-///////// IMPORTS //////////
-///////////////////////////
-const FizzBuzz = require('./FizzBuzz');
+///////////////////
+///// IMPORTS /////
+///////////////////
+const FizzBuzz = require('../../Fizz_buzz/fizzbuzz');
 
 describe('FizzBuzz', () => {
   describe('generate()', () => {
@@ -32,9 +32,9 @@ describe('FizzBuzz', () => {
     });
 
     it('should return the number itself for non-multiples of 3 or 5', () => {
-      expect(FizzBuzz.getReplacement(1)).toBe(1);
-      expect(FizzBuzz.getReplacement(7)).toBe(7);
-      expect(FizzBuzz.getReplacement(13)).toBe(13);
+      expect(FizzBuzz.getReplacement(1)).toBe("1");
+      expect(FizzBuzz.getReplacement(7)).toBe("7");
+      expect(FizzBuzz.getReplacement(13)).toBe("13");
     });
   });
 });

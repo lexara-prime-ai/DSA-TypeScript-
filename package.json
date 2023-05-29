@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": ""
+    "test": "jest"
   },
   "author": "Irfan Ghat",
   "license": "ISC",

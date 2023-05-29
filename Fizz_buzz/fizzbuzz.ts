@@ -15,4 +15,5 @@ class FizzBuzz {
     }
 }
 
-console.log(FizzBuzz.generate(10).join(", "));
+module.exports = FizzBuzz;
+// console.log(FizzBuzz.generate(10).join(", "));
