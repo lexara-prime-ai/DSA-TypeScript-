@@ -7,7 +7,9 @@ let MATH_OPERATIONS = {
     SEQUENCE: function GENERATE_SEQUENCE(Fn) {
         // INITIALIZE ARRAY
         let NUMBERS = [];
-        // INITIALIZE THE ARRAY WITH [0, 1]
+        // SET THE CONTENTS OF THE ARRAY TO [0] IF Fn IS = 0  
+        // ELSE SET THE CONTENTS OF THE ARRAY TO [0, 1] IF Fn IS = 1
+        // ELSE SET THE CONTENTS OF THE ARRAY TO [0, 1]
         Fn === 0 ? NUMBERS = [0] : Fn === 1 ? NUMBERS = [0, 1] : NUMBERS = [0, 1];
         // LOOP IN ORDER TO GENERATE Fn NUMBERS
         for (let i = 2; i <= Fn; i++) {
