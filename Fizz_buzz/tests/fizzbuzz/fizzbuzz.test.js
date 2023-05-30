@@ -1,7 +1,7 @@
 ///////////////////
 ///// IMPORTS /////
 ///////////////////
-const FizzBuzz = require('../../Fizz_buzz/fizzbuzz');
+const FizzBuzz = require('../../fizzbuzz');
 
 describe('FizzBuzz', () => {
   describe('generate()', () => {

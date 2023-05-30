@@ -1,5 +1,5 @@
 // FORMULA : Fn = Fn-1 + Fn-2, where n > 1
-let MATH_OPERATIONS = {
+const MATH_OPERATIONS = {
     logToConsole(msg: any) {
         console.log(msg);
     },
@@ -21,4 +21,8 @@ let MATH_OPERATIONS = {
     }
 };
 
-MATH_OPERATIONS.SEQUENCE(9);
+const GENERATE_FIBONACCI_SEQUENCE = (n: number) => MATH_OPERATIONS.SEQUENCE(n); 
+GENERATE_FIBONACCI_SEQUENCE(9);
+
+module.exports = GENERATE_FIBONACCI_SEQUENCE;
+
